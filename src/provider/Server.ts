@@ -36,6 +36,7 @@ export default class Server{
         });
     }
 
+    // JS y TS Manejan promesas de forma diferente por lo que necesitamos obligar a TS a que espere
     private async connectDB(){
         try{
             await db.sequelize.sync({force:false});
