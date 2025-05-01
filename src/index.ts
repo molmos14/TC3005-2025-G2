@@ -8,6 +8,7 @@ import EstudioController from "./controllers/EstudioController";
 import ProjectController from "./controllers/ProjectController";
 import CollaboratorController from "./controllers/CollaboratorController";
 import UserController from "./controllers/UserController";
+import TaskController from "./controllers/TaskController";
 
 const server = new Server({
     env: NODE_ENV,
@@ -21,7 +22,8 @@ const server = new Server({
         EstudioController.instance, 
         ProjectController.instance, 
         CollaboratorController.instance,
-        UserController.instance,
+        //UserController.instance,
+        TaskController.instance,
     ]
 });
 
