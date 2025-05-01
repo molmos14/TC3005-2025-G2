@@ -38,11 +38,11 @@ export default class Server{
 
     // JS y TS Manejan promesas de forma diferente por lo que necesitamos obligar a TS a que espere
     private async connectDB(){
-        try {
-            await db.sequelize.sync({force:false}); // force:true para crear la base de datos desde cero
-            console.log('Database connected');
-        }catch{
-            console.log('Error connecting to database');
+        try{
+            await db.sequelize.sync({force:false});
+            console.log('Database connected successfully');
+        }catch(error){
+            console.error('Error connecting to the database:', error);
         }
     }
 
